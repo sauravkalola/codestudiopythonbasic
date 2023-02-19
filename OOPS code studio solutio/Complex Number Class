@@ -1,0 +1,42 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+
+
+class Complexnumber:
+    def __init__(self, c1, c2):
+        self.c1 = c1
+        self.c2 = c2
+    
+    def Plus(self):
+         self.c1 = self.c1 + self.c2
+
+
+    def mul1(self):
+            self.c1 = self.c1 * self.c2
+
+    def Print(self):
+        str1 = str(self.c1)
+        str1 = str1.replace("+", " + "+"i")
+        str1 = str1.replace("j", "")
+        print(str1.strip("()")) 
+        
+real, imaginary = map(int,input().split(' '))
+c1 = complex(real, imaginary)
+real1, imaginary1 = map(int,input().split(' '))
+c2 = complex(real1, imaginary1)
+i1 = int(input())
+
+if i1 == 1:
+    Com = Complexnumber(c1, c2)
+    Com.Plus()
+    Com.Print()
+elif i1 == 2:
+    Com = Complexnumber(c1, c2)
+    Com.mul1()
+    Com.Print()
+else:
+    print()
+
